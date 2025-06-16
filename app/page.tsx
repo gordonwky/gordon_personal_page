@@ -1,7 +1,7 @@
 "use client"
 import GordonNavBar from "@/components/GordonNavBar/GordonNavBar";
 import { HeroUIProvider } from "@heroui/react";
-import { Image } from "@heroui/react";
+import Image from "next/image"
 import { GordonAnimatedText } from "@/components/GordonAnimatedText/GordonAnimatedText";
 import { Button } from "@heroui/react";
 import ProjectCard from "@/components/GordonProjectCard/GordonProjectCard";
@@ -26,9 +26,9 @@ function Avatar({ src, alt = 'User Avatar', size = 250, className }: AvatarProps
       <Image
         src={src}
         alt={alt}
-        height={300}
-        width={300}
-
+        // height={300}
+        // width={300}
+        fill
         className="object-cover object-center"
       />
     </div>

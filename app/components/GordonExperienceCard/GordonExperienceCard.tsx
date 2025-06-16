@@ -1,6 +1,6 @@
 // components/ExperienceCard.tsx
 
-import { Image } from "@heroui/react";
+import Image from "next/image";
 import { Experience } from "@/types/experience";
 
 const ExperienceCard: React.FC<Experience> = ({
@@ -13,7 +13,7 @@ const ExperienceCard: React.FC<Experience> = ({
         <div className="px-[16px]">
             <div className="px-4 py-4 grid grid-cols-3 items-center gap-4">
                 <div className="col-span-1 flex flex-row items-center">
-                    <Image src={companyLogo} alt="company logo" width={150} height={100} />
+                    <Image src={companyLogo} alt="company logo" width={100} height={60} />
                 </div>
                 <h1 className="mb-3 col-span-1 text-[20px] text-white font-extrabold">
                     {role}
