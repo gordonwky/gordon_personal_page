@@ -1,7 +1,7 @@
 // components/ExperienceCard.tsx
 
 import Image from "next/image";
-import { Experience } from "@/app/types/experience";
+import { Experience } from "@/types/experience";
 
 const ExperienceCard: React.FC<Experience> = ({
     role,

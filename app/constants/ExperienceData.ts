@@ -1,5 +1,4 @@
 // data/experienceData.ts or inside your component
-import { Page } from "../../stories/Page";
 import { Experience } from "../types/experience"
 import { ProjectCardProps } from "../types/experience"
 export const EducationData : Experience[] = 

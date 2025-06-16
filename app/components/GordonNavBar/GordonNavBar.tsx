@@ -9,7 +9,6 @@ import {
     NavbarMenu,
     NavbarMenuItem,
     Link,
-    Button,
     Image
 } from "@heroui/react";
 export const MyLogo = () => {

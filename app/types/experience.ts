@@ -7,7 +7,7 @@ export type Experience =  {
 export type ProjectCardProps = {
     title?: string;
     description?: string;
-    technologies?: string[];
+    technologies: string[];
     imageUrl?: string;
     pageUrl?: string;
     source?: string;
