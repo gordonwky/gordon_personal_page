@@ -61,9 +61,8 @@ export const projectData: ProjectCardProps[] = [
     ["OpenAI API", "Python", "Scikit-learn", "Pandas", "seaborn", "lexical-diversity" ,"nltk"]
   ,    pageUrl: "https://github.com/gordonwky/AI_Essay_Scoring",
   source: "GitHub",
-  imageUrl :"258-2587139_image-result-for-amazon-redshift-documentation-gitlab-logo.png"
+  imageUrl: "/images/github.png"
 
-  
   },
   {
     title: "Medical Chatbot with RAG",
@@ -73,7 +72,9 @@ export const projectData: ProjectCardProps[] = [
   ["LangChain", "GitLab CI/CD", "Python", "FAISS", "streamlit"],
     pageUrl: "https://gitlab.cas.mcmaster.ca/wongk124/medical_chatbot",
   source: "GitLab",
-  imageUrl: "/images/github.png"
+
+    imageUrl :"/images/gitlab.svg"
+
 
 
     },
@@ -85,7 +86,8 @@ export const projectData: ProjectCardProps[] = [
   , technologies: ["C++", "GoogleTest", "Eigen", "CMake", "Git", "Apple Instrument"],
   pageUrl: "https://github.com/gordonwky/GMM_EM"
   ,
-  source: "GitHub"
+  source: "GitHub",
+    imageUrl: "/images/github.png"
 
     },
   {
@@ -94,6 +96,7 @@ export const projectData: ProjectCardProps[] = [
       "A video style transfer tool using CNNs for segmentation and CycleGAN for style transfer in PyTorch."
   , technologies: ["Python", "PyTorch", "OpenCV", "NumPy", "Matplotlib"],
   pageUrl: "https://github.com/gordonwky/video-transfer",
-  source: "GitHub"
+  source: "GitHub",
+    imageUrl: "/images/github.png"
   }
 ];

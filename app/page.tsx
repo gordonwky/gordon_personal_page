@@ -1,7 +1,7 @@
 "use client"
 import GordonNavBar from "@/components/GordonNavBar/GordonNavBar";
 import { HeroUIProvider } from "@heroui/react";
-import Image from 'next/image';
+import { Image } from "@heroui/react";
 import { GordonAnimatedText } from "@/components/GordonAnimatedText/GordonAnimatedText";
 import { Button } from "@heroui/react";
 import ProjectCard from "@/components/GordonProjectCard/GordonProjectCard";
@@ -26,7 +26,9 @@ function Avatar({ src, alt = 'User Avatar', size = 250, className }: AvatarProps
       <Image
         src={src}
         alt={alt}
-        fill
+        height={300}
+        width={300}
+
         className="object-cover object-center"
       />
     </div>
@@ -64,7 +66,7 @@ export default function Home() {
         </div>
 
         <div className="bg-black h-[120px] flex justify-center items-center">
-          <Button color="default" href="#contact" radius="full" className="bg-white h-[64px] w-[195px] font-bold text-[18px]" disableAnimation disableRipple >Get in Touch</Button>
+          <Button color="default" as={Link} href="#contact" radius="full" className="bg-white h-[64px] w-[195px] font-bold text-[18px]" disableAnimation disableRipple >Get in Touch</Button>
           <Button color="default" as={Link} href="https://drive.google.com/file/d/1DOLApQiA76RKxifcA7lyFdBLsTlaObEU/view?usp=sharing" variant="ghost" radius="full" className="text-white h-[64px] w-[195px] font-bold text-[18px] boader boader-1 boader-white " disableAnimation disableRipple >Download CV</Button>
         </div>
 
