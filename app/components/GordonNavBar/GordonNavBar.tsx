@@ -9,8 +9,8 @@ import {
     NavbarMenu,
     NavbarMenuItem,
     Link,
-    Image
 } from "@heroui/react";
+import Image from "next/image";
 export const MyLogo = () => {
     return (
         <Image
