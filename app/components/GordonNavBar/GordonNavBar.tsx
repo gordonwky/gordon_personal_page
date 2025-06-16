@@ -51,18 +51,18 @@ export default function GordonNavBar() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem >
-                    <Link className="text-white font-Inter" href="#">
+                    <Link className="text-white font-Inter" href="#Projects">
                         Projects
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className="text-white" href="#">
+                    <Link className="text-white" href="#Working">
                         Experience
                     </Link>
                 </NavbarItem>
 
                 <NavbarItem>
-                    <Link className="text-white" href="#">
+                    <Link className="text-white" href="#contact">
                         Contact
                     </Link>
                 </NavbarItem>

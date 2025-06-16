@@ -43,7 +43,7 @@ export const experienceData : Experience[] = [
     },
     {
       role: "STEM Teacher",
-      companyLogo: "/images/tpk_logo.jpg",
+      companyLogo: "/images/tpklogo.jpg",
       period: "2022 - 2023",
       description: [
         "Led a school STEM team in robotics programming using Arduino kits, winning a school-wide robotics competition, demonstrating team and leadership skills.",
@@ -60,7 +60,8 @@ export const projectData: ProjectCardProps[] = [
     technologies:
     ["OpenAI API", "Python", "Scikit-learn", "Pandas", "seaborn", "lexical-diversity" ,"nltk"]
   ,    pageUrl: "https://github.com/gordonwky/AI_Essay_Scoring",
-  source: "GitHub"
+  source: "GitHub",
+  imageUrl :"258-2587139_image-result-for-amazon-redshift-documentation-gitlab-logo.png"
 
   
   },
@@ -71,7 +72,8 @@ export const projectData: ProjectCardProps[] = [
   , technologies:
   ["LangChain", "GitLab CI/CD", "Python", "FAISS", "streamlit"],
     pageUrl: "https://gitlab.cas.mcmaster.ca/wongk124/medical_chatbot",
-  source: "GitLab"
+  source: "GitLab",
+  imageUrl: "/images/github.png"
 
 
     },

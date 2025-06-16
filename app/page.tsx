@@ -8,6 +8,8 @@ import ProjectCard from "@/components/GordonProjectCard/GordonProjectCard";
 import { projectData } from "@/constants/ExperienceData";
 import ExperienceCard from "@/components/GordonExperienceCard/GordonExperienceCard";
 import { experienceData, EducationData } from "@/constants/ExperienceData";
+import { Footer } from "@/components/Footer/Footer";
+import Link from "next/link";
 type AvatarProps = {
   src: string;
   alt?: string;
@@ -34,7 +36,7 @@ function Avatar({ src, alt = 'User Avatar', size = 250, className }: AvatarProps
 export default function Home() {
   return (
     <HeroUIProvider>
-      <div className="w-full min-h-screen bg-black" >
+      <div className="w-full min-h-screen bg-black overflow-hidden" >
         <div>
           <GordonNavBar />
         </div>
@@ -62,24 +64,24 @@ export default function Home() {
         </div>
 
         <div className="bg-black h-[120px] flex justify-center items-center">
-          <Button color="default" radius="full" className="bg-white h-[64px] w-[195px] font-bold text-[18px]" disableAnimation disableRipple >Get in Touch</Button>
-          <Button color="default" variant="ghost" radius="full" className="text-white h-[64px] w-[195px] font-bold text-[18px] boader boader-1 boader-white " disableAnimation disableRipple >Download CV</Button>
+          <Button color="default" href="#contact" radius="full" className="bg-white h-[64px] w-[195px] font-bold text-[18px]" disableAnimation disableRipple >Get in Touch</Button>
+          <Button color="default" as={Link} href="https://drive.google.com/file/d/1DOLApQiA76RKxifcA7lyFdBLsTlaObEU/view?usp=sharing" variant="ghost" radius="full" className="text-white h-[64px] w-[195px] font-bold text-[18px] boader boader-1 boader-white " disableAnimation disableRipple >Download CV</Button>
         </div>
 
-        <div className=" flex-col gap-2 bg-black px-4" id="Programming">
+        <div className=" py-2 flex-col gap-2 bg-black px-4" id="Programming">
           <h1 className="  text-[#C5C5C5] text-[18px] font-bold ">
             Experience with
           </h1>
-          <div className=" h-[40px] flex gap-8 mt-6 justify-center " >
+          <div className="flex flex-wrap gap-6 mt-6 justify-center h-auto sm:h-[40px]">
             <Image src="/images/reactjs.png" alt="React" width={50} height={50} />
-            <Image src="/images/python.png" alt="Next.js" width={50} height={50} />
-            <Image src="/images/c-logo-black-and-white.png" alt="cpp" width={50} height={50} />
-            <Image src="/images/css.png" alt="css" width={50} height={50} />
-            <Image src="/images/html.png" alt="html" width={50} height={50} />
-            <Image src="/images/nodejs.png" alt="nodejs" width={50} height={50} />
-            <Image src="/images/sql.png" alt="sql" width={50} height={50} className="invert" />
-
+            <Image src="/images/python.png" alt="Python" width={50} height={50} />
+            <Image src="/images/c-logo-black-and-white.png" alt="C++" width={50} height={50} />
+            <Image src="/images/css.png" alt="CSS" width={50} height={50} />
+            <Image src="/images/html.png" alt="HTML" width={50} height={50} />
+            <Image src="/images/nodejs.png" alt="Node.js" width={50} height={50} />
+            <Image src="/images/sql.png" alt="SQL" width={50} height={50} className="invert" />
           </div>
+
         </div>
 
         <div>
@@ -102,13 +104,13 @@ export default function Home() {
           <h1 className=" py-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#FF8660] to-[#D5491D] bg-clip-text text-transparent" id="Projects" >
             Projects
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {projectData.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
 
-          <h1 className=" pt-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#5BADFF] to-[#1373D1] bg-clip-text text-transparent" id="Working">
+          <h1 className=" py-4 pt-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#5BADFF] to-[#1373D1] bg-clip-text text-transparent" id="Working">
             Working Experience
           </h1>
           <div className="space-y-6">
@@ -123,6 +125,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <Footer />
       </div >
     </HeroUIProvider>
   );
