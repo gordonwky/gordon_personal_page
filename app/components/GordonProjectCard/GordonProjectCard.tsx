@@ -1,37 +1,30 @@
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@heroui/react";
-
-type ProjectCardProps = {
-    title?: string;
-    description?: string;
-    imageUrl?: string;
-    link?: string;
-    pageUrl?: string;
-    source?: string;
-};
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, link, source }) => {
+import { ProjectCardProps } from "../../types/experience"
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, technologies, pageUrl, source }) => {
     return (
-        <Card className="max-w-[400px] text-white bg-[#222222] rounded-lg shadow-lg px-4 py-4">
+        <Card className="max-w-[400px]  bg-[#222222] rounded-lg shadow-lg px-4 py-4 ">
             <CardHeader className="flex gap-3">
-                <Image
+                {/* <Image
                     alt="heroui logo"
                     height={40}
                     radius="sm"
                     src={imageUrl}
                     width={40}
-                />
+                /> */}
                 <div className="flex flex-col">
-                    <p className="text-md">{title}</p>
+                    <p className="text-md text-white">{title}</p>
                 </div>
             </CardHeader>
-            <Divider />
+            <Divider className="text-white" />
             <CardBody>
-                <p>{description}</p>
+                <p className="text-white">{description}</p>
             </CardBody>
-            <Divider />
+            <Divider className="text-white" />
             <CardFooter>
-                <Link isExternal showAnchorIcon href={link}>
-                    Visit source code on {source}.
+                <Link isExternal showAnchorIcon className="text-blue-500" href={pageUrl}>
+                    Visit on {source}
                 </Link>
+
             </CardFooter>
         </Card>
     );

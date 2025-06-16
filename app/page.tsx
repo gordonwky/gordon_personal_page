@@ -1,48 +1,129 @@
-"use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://backend:5001/api";
+"use client"
+import GordonNavBar from "@/components/GordonNavBar/GordonNavBar";
+import { HeroUIProvider } from "@heroui/react";
+import Image from 'next/image';
+import { GordonAnimatedText } from "@/components/GordonAnimatedText/GordonAnimatedText";
+import { Button } from "@heroui/react";
+import ProjectCard from "@/components/GordonProjectCard/GordonProjectCard";
+import { projectData } from "@/constants/ExperienceData";
+import ExperienceCard from "@/components/GordonExperienceCard/GordonExperienceCard";
+import { experienceData, EducationData } from "@/constants/ExperienceData";
+type AvatarProps = {
+  src: string;
+  alt?: string;
+  size?: number;
+  className?: string;
+};
+
+function Avatar({ src, alt = 'User Avatar', size = 250, className }: AvatarProps) {
+  return (
+    <div
+      className={`relative rounded-full overflow-hidden ${className}`}
+      style={{ width: size, height: size }}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover object-center"
+      />
+    </div>
+  );
+}
 
 export default function Home() {
-  const router = useRouter();
-  const [form, setForm] = useState({ username: "", password: "" });
-  const [message, setMessage] = useState("");
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    console.log("api link", API_URL);
-    const res = await fetch(`${API_URL}/auth/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    const data = await res.json();
-    setMessage(data.message);
-    if (data.token) {
-      localStorage.setItem("token", data.token);
-      router.push("/dashboard");
-    }
-  }
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-md w-80">
-        <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="Username" placeholder="Username" className="w-full p-2 border rounded"
-            onChange={(e) => setForm({ ...form, username: e.target.value })} />
-          <input type="password" placeholder="Password" className="w-full p-2 border rounded"
-            onChange={(e) => setForm({ ...form, password: e.target.value })} />
-          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-            Login
-          </button>
-        </form>
-        <p className="text-center text-red-500 mt-2">{message}</p>
-        <button onClick={() => router.push("/signup")} className="mt-4 text-blue-600 underline block text-center">
-          Don't have an account? Sign up
-        </button>
-      </div>
-    </div>
+    <HeroUIProvider>
+      <div className="w-full min-h-screen bg-black" >
+        <div>
+          <GordonNavBar />
+        </div>
+
+        <div className="bg-black h-auto px-4 py-[80px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            {/* Avatar section */}
+            <div className="flex justify-center md:justify-start">
+              <Avatar src="/images/profolio.JPG" alt="Gordon Signature" size={300} />
+            </div>
+
+            {/* Text section */}
+            <div className="md:col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+              <GordonAnimatedText sentence="I code and create content " />
+              <GordonAnimatedText sentence="to make impact!" className="text-[#FF8660]" />
+              <h1 className="text-[#C5C5C5] text-[18px] font-bold mt-4">
+                Computational Science ✖ Software Engineeing ✖ Humanities <br />
+              </h1>
+              <h2 className="text-[#C5C5C5] mt-2">
+                I am a software engineer with a background in science and a love in literature <br />
+                I am dedicated to creating innovative solutions that bridge the gap between technology and human experience. <br />
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black h-[120px] flex justify-center items-center">
+          <Button color="default" radius="full" className="bg-white h-[64px] w-[195px] font-bold text-[18px]" disableAnimation disableRipple >Get in Touch</Button>
+          <Button color="default" variant="ghost" radius="full" className="text-white h-[64px] w-[195px] font-bold text-[18px] boader boader-1 boader-white " disableAnimation disableRipple >Download CV</Button>
+        </div>
+
+        <div className=" flex-col gap-2 bg-black px-4" id="Programming">
+          <h1 className="  text-[#C5C5C5] text-[18px] font-bold ">
+            Experience with
+          </h1>
+          <div className=" h-[40px] flex gap-8 mt-6 justify-center " >
+            <Image src="/images/reactjs.png" alt="React" width={50} height={50} />
+            <Image src="/images/python.png" alt="Next.js" width={50} height={50} />
+            <Image src="/images/c-logo-black-and-white.png" alt="cpp" width={50} height={50} />
+            <Image src="/images/css.png" alt="css" width={50} height={50} />
+            <Image src="/images/html.png" alt="html" width={50} height={50} />
+            <Image src="/images/nodejs.png" alt="nodejs" width={50} height={50} />
+            <Image src="/images/sql.png" alt="sql" width={50} height={50} className="invert" />
+
+          </div>
+        </div>
+
+        <div>
+
+          <h1 className=" py-2 px-4 text-2xl font-bold bg-[#8C24F3] bg-clip-text text-transparent" id="Education" >
+            Education
+          </h1>
+          <div className="space-y-6">
+            {EducationData.map((exp, index) => (
+              <ExperienceCard
+                key={index}
+                role={exp.role}
+                companyLogo={exp.companyLogo}
+                period={exp.period}
+                description={exp.description}
+              />
+            ))}
+          </div>
+
+          <h1 className=" py-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#FF8660] to-[#D5491D] bg-clip-text text-transparent" id="Projects" >
+            Projects
+          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 px-4">
+            {projectData.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+
+          <h1 className=" pt-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#5BADFF] to-[#1373D1] bg-clip-text text-transparent" id="Working">
+            Working Experience
+          </h1>
+          <div className="space-y-6">
+            {experienceData.map((exp, index) => (
+              <ExperienceCard
+                key={index}
+                role={exp.role}
+                companyLogo={exp.companyLogo}
+                period={exp.period}
+                description={exp.description}
+              />
+            ))}
+          </div>
+        </div>
+      </div >
+    </HeroUIProvider>
   );
 }

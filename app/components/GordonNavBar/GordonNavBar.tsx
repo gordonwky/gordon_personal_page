@@ -1,16 +1,17 @@
+'use client';
 import React from "react";
+import { NavbarMenuToggle } from "@heroui/navbar"
 import {
     Navbar,
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    NavbarMenuToggle,
     NavbarMenu,
     NavbarMenuItem,
     Link,
     Button,
+    Image
 } from "@heroui/react";
-import { Image } from "@heroui/react";
 export const MyLogo = () => {
     return (
         <Image
@@ -25,13 +26,20 @@ export const MyLogo = () => {
 
 export default function GordonNavBar() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const menuItems = [
+        "Profile",
+        "Projects",
+        "Experience",
+        "Education"
+    ];
 
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#222222] py-6 h-[60px] px-4 ">
             <NavbarContent justify="start" className="gap-2">
-                {/* <NavbarMenuToggle
-                    className="sm:hidden"
-                /> */}
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden text-white"
+                />
                 <NavbarBrand className="sm:flex" >
                     <MyLogo />
                 </NavbarBrand>
@@ -61,7 +69,19 @@ export default function GordonNavBar() {
                 </NavbarItem>
 
             </NavbarContent>
-
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`}>
+                        <Link
+                            className="w-full text-white"
+                            href="#"
+                            size="lg"
+                        >
+                            {item}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
         </Navbar>
     );
 }
