@@ -1,4 +1,5 @@
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@heroui/react";
+import Image from "next/image"
+import { Card, CardHeader, CardBody, CardFooter, Divider, Link } from "@heroui/react";
 import { ProjectCardProps } from "../../types/experience"
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, technologies, pageUrl, source }) => {
     return (
@@ -7,7 +8,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl,
                 <Image
                     alt="heroui logo"
                     height={40}
-                    radius="sm"
+                    // radius="sm"
                     src={imageUrl}
                     width={40}
                 />
