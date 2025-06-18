@@ -14,7 +14,7 @@ export const MyLogo = () => {
         <Image
             alt="My Logo"
             className="mr-2 h-8 w-auto  font-white "
-            src="/images/GordonSignature.png"
+            src="./images/GordonSignature.png"
             width={150}
             height={44}
         />
