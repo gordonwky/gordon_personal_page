@@ -15,7 +15,7 @@ export const MyLogo = () => {
     return (
         <Image
             alt="My Logo"
-            className="mr-2 hidden h-8 w-auto sm:inline-block font-white "
+            className="mr-2 h-8 w-auto  font-white "
             src="/images/GordonSignature.png"
             width={150}
             height={44}
@@ -24,26 +24,12 @@ export const MyLogo = () => {
 };
 
 export default function GordonNavBar() {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const menuItems = [
-        "Profile",
-        "Projects",
-        "Experience",
-        "Education"
-    ];
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#222222] py-6 h-[60px] px-4 ">
-            <NavbarContent justify="start" className="gap-2">
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden text-white"
-                />
-                <NavbarBrand className="sm:flex" >
-                    <MyLogo />
-                </NavbarBrand>
-            </NavbarContent>
-
+        <Navbar className="bg-[#222222] py-6 h-[60px] px-4 ">
+            <NavbarBrand >
+                <MyLogo />
+            </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-[60px] font-serif ml-auto" justify="end">
                 <NavbarItem>
                     <Link className="text-white" href="#">
@@ -56,7 +42,7 @@ export default function GordonNavBar() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className="text-white" href="#Working">
+                    <Link className="text-white" href="#Experience">
                         Experience
                     </Link>
                 </NavbarItem>
@@ -68,19 +54,7 @@ export default function GordonNavBar() {
                 </NavbarItem>
 
             </NavbarContent>
-            <NavbarMenu>
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link
-                            className="w-full text-white"
-                            href="#"
-                            size="lg"
-                        >
-                            {item}
-                        </Link>
-                    </NavbarMenuItem>
-                ))}
-            </NavbarMenu>
+
         </Navbar>
     );
 }

@@ -15,10 +15,10 @@ const ExperienceCard: React.FC<Experience> = ({
                 <div className="col-span-1 flex flex-row items-center">
                     <Image src={companyLogo} alt="company logo" width={100} height={60} />
                 </div>
-                <h1 className="mb-3 col-span-1 text-[20px] text-white font-extrabold">
+                <h1 className="mb-3 col-span-1 text-[20px] sm:[16px] text-white font-extrabold">
                     {role}
                 </h1>
-                <h1 className="mb-3 col-span-1 text-[16px] text-[#8491A0] font-light text-right">
+                <h1 className="mb-3 col-span-1 text-[16px] sm:[14px] text-[#8491A0] font-light text-right">
                     {period}
                 </h1>
             </div>

@@ -51,7 +51,7 @@ export default function Home() {
             </div>
 
             {/* Text section */}
-            <div className="md:col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+            <div className="md:col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-left" id="Profile">
               <GordonAnimatedText sentence="I code and create content " />
               <GordonAnimatedText sentence="to make impact!" className="text-[#FF8660]" />
               <h1 className="text-[#C5C5C5] text-[18px] font-bold mt-4">
@@ -112,7 +112,7 @@ export default function Home() {
             ))}
           </div>
 
-          <h1 className=" py-4 pt-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#5BADFF] to-[#1373D1] bg-clip-text text-transparent" id="Working">
+          <h1 className=" py-4 pt-2 px-4 text-2xl font-bold bg-gradient-to-r from-[#5BADFF] to-[#1373D1] bg-clip-text text-transparent" id="Experience">
             Working Experience
           </h1>
           <div className="space-y-6">

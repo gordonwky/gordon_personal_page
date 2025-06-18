@@ -4,8 +4,8 @@ import { ProjectCardProps } from "../types/experience"
 export const EducationData : Experience[] = 
 [
   {
-    role: "Master of Science in Computational Science and Engineer",
-    companyLogo:"/images/McMaster-logo.png",
+    role: "MSc in Computational Science and Engineering",
+    companyLogo:"./images/McMaster-logo.png",
     period:"2023 - 2025",
     description: [
       "Dissertation: Mixed-Precision GMRES-Based Iterative Refinement Sparse Linear Solver with QDLDL"
@@ -13,8 +13,8 @@ export const EducationData : Experience[] =
   },
 
     {
-    role: "Bachelor of Science in Physics (minor in Mathematics and Humanities)",
-    companyLogo:"/images/Hong_Kong_University_of_Science_and_Technology-Logo.svg",
+    role: "BSc in Physics (minor in Mathematics and Humanities)",
+    companyLogo:"./images/Hong_Kong_University_of_Science_and_Technology-Logo.svg",
     period:"2016 - 2021",
     description: [
       "Dissertation: Markov Chain Monte Carlo Simulation on Ising Model"
@@ -24,7 +24,7 @@ export const EducationData : Experience[] =
 export const experienceData : Experience[] = [
     {
       role: "Machine Learning Intern",
-      companyLogo: "/images/Hong_Kong_Observatory_Logo_(2018).svg.png",
+      companyLogo: "./images/Hong_Kong_Observatory_Logo_(2018).svg.png",
       period: "2020 - 2021",
       description: [
         "Processed millions of real-time flight records with Pandas and built an XGBoost fuel prediction model in Python, achieving 90% accuracy and improving fuel forecast efficiency.",
@@ -33,7 +33,7 @@ export const experienceData : Experience[] = [
     },
     {
       role: "Full Stack Developer",
-      companyLogo: "/images/rare_elements.png",
+      companyLogo: "./images/rare_elements.png",
       period: "2021",
       description: [
         "Built and maintained a fintech full-stack web app (React.js, Node.js, Azure) for 10+ enterprise clients and hundreds of users, enhancing transaction workflows and UX.",
@@ -43,7 +43,7 @@ export const experienceData : Experience[] = [
     },
     {
       role: "STEM Teacher",
-      companyLogo: "/images/tpklogo.jpg",
+      companyLogo: "./images/tpklogo.jpg",
       period: "2022 - 2023",
       description: [
         "Led a school STEM team in robotics programming using Arduino kits, winning a school-wide robotics competition, demonstrating team and leadership skills.",
@@ -61,7 +61,7 @@ export const projectData: ProjectCardProps[] = [
     ["OpenAI API", "Python", "Scikit-learn", "Pandas", "seaborn", "lexical-diversity" ,"nltk"]
   ,    pageUrl: "https://github.com/gordonwky/AI_Essay_Scoring",
   source: "GitHub",
-  imageUrl: "/images/github.png"
+  imageUrl: "./images/github.png"
 
   },
   {
@@ -73,7 +73,7 @@ export const projectData: ProjectCardProps[] = [
     pageUrl: "https://gitlab.cas.mcmaster.ca/wongk124/medical_chatbot",
   source: "GitLab",
 
-    imageUrl :"/images/gitlab.svg"
+    imageUrl :"./images/gitlab.svg"
 
 
 
@@ -87,7 +87,7 @@ export const projectData: ProjectCardProps[] = [
   pageUrl: "https://github.com/gordonwky/GMM_EM"
   ,
   source: "GitHub",
-    imageUrl: "/images/github.png"
+    imageUrl: "./images/github.png"
 
     },
   {
@@ -97,6 +97,6 @@ export const projectData: ProjectCardProps[] = [
   , technologies: ["Python", "PyTorch", "OpenCV", "NumPy", "Matplotlib"],
   pageUrl: "https://github.com/gordonwky/video-transfer",
   source: "GitHub",
-    imageUrl: "/images/github.png"
+    imageUrl: "./images/github.png"
   }
 ];
