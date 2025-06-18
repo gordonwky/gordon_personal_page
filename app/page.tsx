@@ -47,7 +47,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             {/* Avatar section */}
             <div className="flex justify-center md:justify-start">
-              <Avatar src={`/images/profolio.JPG`} alt="Gordon Signature" size={300} />
+              <Avatar src={`./images/profolio.JPG`} alt="Gordon Signature" size={300} />
             </div>
 
             {/* Text section */}
@@ -75,13 +75,13 @@ export default function Home() {
             Experience with
           </h1>
           <div className="flex flex-wrap gap-6 mt-6 justify-center h-auto sm:h-[40px]">
-            <Image src={`/images/reactjs.png`} alt="React" width={50} height={50} />
-            <Image src={`/images/python.png`} alt="Python" width={50} height={50} />
-            <Image src={`/images/c-logo-black-and-white.png`} alt="C++" width={50} height={50} />
-            <Image src={`/images/css.png`} alt="CSS" width={50} height={50} />
-            <Image src={`/images/html.png`} alt="HTML" width={50} height={50} />
-            <Image src={`/images/nodejs.png`} alt="Node.js" width={50} height={50} />
-            <Image src={`/images/sql.png`} alt="SQL" width={50} height={50} className="invert" />
+            <Image src={`./images/reactjs.png`} alt="React" width={50} height={50} />
+            <Image src={`./images/python.png`} alt="Python" width={50} height={50} />
+            <Image src={`./images/c-logo-black-and-white.png`} alt="C++" width={50} height={50} />
+            <Image src={`./images/css.png`} alt="CSS" width={50} height={50} />
+            <Image src={`./images/html.png`} alt="HTML" width={50} height={50} />
+            <Image src={`./images/nodejs.png`} alt="Node.js" width={50} height={50} />
+            <Image src={`./images/sql.png`} alt="SQL" width={50} height={50} className="invert" />
           </div>
 
         </div>
